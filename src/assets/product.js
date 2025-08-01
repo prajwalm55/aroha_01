@@ -1,100 +1,154 @@
-// // src/assets/product.js
-// const products = [
-//     {
-//       id: 1,
-//       name: 'Classic White Shirt',
-//       price: 29.99,
-//       category: 'Shirts',
-//       color: '#f3f4f6'
-//     },
-//     {
-//       id: 2,
-//       name: 'Casual Blue Shirt',
-//       price: 34.99,
-//       category: 'Shirts',
-//       color: '#60a5fa'
-//     },
-//     {
-//       id: 3,
-//       name: 'Premium Black Shirt',
-//       price: 39.99,
-//       category: 'Shirts',
-//       color: '#1f2937'
-//     },
-//   ];
-  
-//   export default products;
-  
-
 const products = [
+    // Shirts
     {
       id: 1,
       name: 'Classic White Shirt',
       price: 29.99,
+      size: 'M',
+      style: 'Regular Fit',
       category: 'Shirts',
-      color: '#f3f4f6'
+      color: '#f3f4f6',
     },
     {
       id: 2,
       name: 'Casual Blue Shirt',
       price: 34.99,
+      size: 'L',
+      style: 'Oversized Fit',
       category: 'Shirts',
-      color: '#60a5fa'
+      color: '#60a5fa',
     },
     {
       id: 3,
       name: 'Premium Black Shirt',
       price: 39.99,
+      size: 'S',
+      style: 'Regular Fit',
       category: 'Shirts',
-      color: '#1f2937'
+      color: '#1f2937',
     },
-  
-    // 🆕 Pants
     {
       id: 4,
-      name: 'Slim Fit Jeans',
-      price: 49.99,
-      category: 'Pants',
-      color: '#1e3a8a'
-    },
-    {
-      id: 5,
-      name: 'Cotton Chinos',
-      price: 44.99,
-      category: 'Pants',
-      color: '#facc15'
+      name: 'Olive Green Shirt',
+      price: 32.99,
+      size: 'XL',
+      style: 'Slim Fit',
+      category: 'Shirts',
+      color: '#4b5563',
     },
   
-    // 🆕 Shoes
+    // Pants
+    {
+      id: 5,
+      name: 'Slim Fit Jeans',
+      price: 49.99,
+      size: 'M',
+      style: 'Regular Fit',
+      category: 'Pants',
+      color: '#1e3a8a',
+    },
     {
       id: 6,
-      name: 'Running Sneakers',
-      price: 59.99,
-      category: 'Shoes',
-      color: '#6b7280'
+      name: 'Cotton Chinos',
+      price: 44.99,
+      size: 'L',
+      style: 'Oversized Fit',
+      category: 'Pants',
+      color: '#facc15',
     },
     {
       id: 7,
-      name: 'Leather Loafers',
-      price: 79.99,
-      category: 'Shoes',
-      color: '#92400e'
+      name: 'Classic Khaki Pants',
+      price: 42.99,
+      size: 'S',
+      style: 'Slim Fit',
+      category: 'Pants',
+      color: '#d1bfa7',
     },
-  
-    // 🆕 Accessories
     {
       id: 8,
-      name: 'Wrist Watch',
-      price: 89.99,
-      category: 'Accessories',
-      color: '#c084fc'
+      name: 'Formal Grey Trousers',
+      price: 54.99,
+      size: 'XL',
+      style: 'Regular Fit',
+      category: 'Pants',
+      color: '#9ca3af',
     },
+  
+    // Shoes
     {
       id: 9,
+      name: 'Running Sneakers',
+      price: 59.99,
+      size: 'L',
+      style: 'Regular Fit',
+      category: 'Shoes',
+      color: '#6b7280',
+    },
+    {
+      id: 10,
+      name: 'Leather Loafers',
+      price: 79.99,
+      size: 'M',
+      style: 'Oversized Fit',
+      category: 'Shoes',
+      color: '#92400e',
+    },
+    {
+      id: 11,
+      name: 'White Canvas Shoes',
+      price: 39.99,
+      size: 'S',
+      style: 'Casual Fit',
+      category: 'Shoes',
+      color: '#ffffff',
+    },
+    {
+      id: 12,
+      name: 'High-top Sneakers',
+      price: 64.99,
+      size: 'XL',
+      style: 'Sport Fit',
+      category: 'Shoes',
+      color: '#111827',
+    },
+  
+    // Accessories
+    {
+      id: 13,
+      name: 'Wrist Watch',
+      price: 89.99,
+      size: 'M',
+      style: 'Regular Fit',
+      category: 'Accessories',
+      color: '#c084fc',
+    },
+    {
+      id: 14,
       name: 'Sunglasses',
       price: 29.99,
+      size: 'L',
+      style: 'Oversized Fit',
       category: 'Accessories',
-      color: '#000000'
+      color: '#000000',
+    },
+    {
+      id: 15,
+      name: 'Leather Wallet',
+      price: 19.99,
+      size: 'S',
+      style: 'Classic Fit',
+      category: 'Accessories',
+      color: '#78350f',
+    },
+    {
+      id: 16,
+      name: 'Canvas Belt',
+      price: 14.99,
+      size: 'XL',
+      style: 'Casual Fit',
+      category: 'Accessories',
+      color: '#d97706',
     }
   ];
   
