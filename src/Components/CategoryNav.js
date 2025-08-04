@@ -1,4 +1,3 @@
-// src/Components/CategoryNav.js
 import React from 'react';
 
 const categories = ['Shirts', 'Pants', 'Shoes', 'Accessories'];

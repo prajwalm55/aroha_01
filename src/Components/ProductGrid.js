@@ -1,4 +1,3 @@
-// ✅ src/Components/ProductGrid.js
 import React from 'react';
 import products from '../assets/product';
 
@@ -109,3 +108,4 @@ const ProductGrid = ({ category, size, style, onAddToCart }) => {
 };
 
 export default ProductGrid;
+

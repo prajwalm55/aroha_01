@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { User } from 'phosphor-react';
 
 const Header = ({ cartItems, onCartToggle, setSidebarOpen }) => {
   const navigate = useNavigate();
+  const [username, setUsername] = useState('Guest');
+
+  // 🔁 Load user name from localStorage on mount
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) {
+      const parsed = JSON.parse(user);
+      setUsername(parsed.name || 'Guest');
+    }
+  }, []);
 
   const handleProfileClick = () => {
     const user = localStorage.getItem('user');
-
     if (user) {
-      // If user is logged in, open sidebar
       setSidebarOpen(true);
     } else {
-      // If user not logged in, go to login page
       navigate('/login');
     }
   };
@@ -41,21 +49,28 @@ const Header = ({ cartItems, onCartToggle, setSidebarOpen }) => {
       </h2>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-        {/* 👤 Profile Icon */}
-        <div
-          onClick={handleProfileClick}
-          style={{
-            fontSize: '20px',
-            cursor: 'pointer',
-            background: '#f3f4f6',
-            borderRadius: '50%',
-            padding: '8px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          👤
+        {/* 👤 Profile icon + name */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div
+            onClick={handleProfileClick}
+            style={{
+              cursor: 'pointer',
+              background: '#f3f4f6',
+              borderRadius: '50%',
+              padding: '6px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '36px',
+              height: '36px',
+              marginBottom: '4px',
+            }}
+          >
+            <User size={20} weight="bold" color="#1f2937" />
+          </div>
+          <span style={{ fontSize: '12px', color: '#1f2937', fontWeight: '500' }}>
+            {username}
+          </span>
         </div>
 
         {/* 🛒 Cart Button */}

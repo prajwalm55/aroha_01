@@ -14,6 +14,7 @@ const Modal = ({ product, onClose, addToCart }) => {
             onClick={() => addToCart(product)}
             className="bg-blue-500 text-white px-4 py-2 rounded"
           >
+            
             Add to Cart
           </button>
           <button onClick={onClose} className="text-red-500">

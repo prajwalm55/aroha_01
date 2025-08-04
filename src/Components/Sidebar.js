@@ -52,6 +52,7 @@ const Sidebar = ({ open, onClose }) => {
             Logout
           </button>
         </>
+        
       ) : (
         <p>You are not logged in.</p>
       )}
