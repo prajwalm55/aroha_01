@@ -4,6 +4,8 @@ import Home from './Pages/Home';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 import UserDetails from './Components/Auth/UserDetails';
+import AdminDashboard from './Pages/AdminDashboard';
+
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/userDetails" element={<UserDetails />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+
       </Routes>
     </Router>
   );
