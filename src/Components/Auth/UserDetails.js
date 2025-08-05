@@ -21,6 +21,7 @@ const UserDetails = () => {
         navigate('/login');
       }
     };
+    
 
     fetchUser();
   }, [navigate]);

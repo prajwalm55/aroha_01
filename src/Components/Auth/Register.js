@@ -1,4 +1,3 @@
-// Login.js
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import axios from 'axios';
@@ -163,5 +162,6 @@ const Register = () => {
     </div>
   );
 };
+
 
 export default Register;

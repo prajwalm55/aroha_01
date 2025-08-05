@@ -1,4 +1,3 @@
-// Login.js
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import axios from 'axios';
@@ -72,7 +71,9 @@ const Login = () => {
           gap: '15px',
         }}
       >
-        <h2 style={{ textAlign: 'center', marginBottom: '10px', color: '#1f2937' }}>Login to StyleHub</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '10px', color: '#1f2937' }}>
+          Login to StyleHub
+        </h2>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', fontSize: '14px' }}>
           <label>
@@ -106,7 +107,9 @@ const Login = () => {
           }}
           {...register('email', { required: 'Email is required' })}
         />
-        {errors.email && <p style={{ color: '#dc2626', fontSize: '12px' }}>{errors.email.message}</p>}
+        {errors.email && (
+          <p style={{ color: '#dc2626', fontSize: '12px' }}>{errors.email.message}</p>
+        )}
 
         <input
           type="password"
@@ -119,7 +122,9 @@ const Login = () => {
           }}
           {...register('password', { required: 'Password is required' })}
         />
-        {errors.password && <p style={{ color: '#dc2626', fontSize: '12px' }}>{errors.password.message}</p>}
+        {errors.password && (
+          <p style={{ color: '#dc2626', fontSize: '12px' }}>{errors.password.message}</p>
+        )}
 
         <button
           type="submit"
@@ -139,13 +144,38 @@ const Login = () => {
 
         <p style={{ textAlign: 'center', fontSize: '13px' }}>
           Don't have an account?{' '}
-          <Link to="/register" style={{ color: '#2563eb', fontWeight: '600', textDecoration: 'none' }}>
+          <Link
+            to="/register"
+            style={{
+              color: '#2563eb',
+              fontWeight: '600',
+              textDecoration: 'none',
+            }}
+          >
             Register
           </Link>
-        </p>
+          </p>
+{/* ✅ Skip link with blue hover effect */}
+<p style={{ textAlign: 'center', marginTop: '8px' }}>
+  <span
+    onClick={() => navigate('/')}
+    style={{
+      textDecoration: 'underline',
+      color: '#6b7280',
+      fontSize: '13px',
+      cursor: 'pointer',
+      transition: 'color 0.2s ease', // Smooth transition
+    }}
+    onMouseEnter={(e) => e.target.style.color = '#3b82f6'} // Blue on hover
+    onMouseLeave={(e) => e.target.style.color = '#6b7280'} // Back to gray
+  >
+    Don't want to create an account right now?
+  </span>
+</p>
       </form>
     </div>
   );
 };
+
 
 export default Login;
