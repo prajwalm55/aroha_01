@@ -1,12 +1,125 @@
+// import React from 'react';
+
+// const ProductCard = ({ product, addToCart }) => {
+//   return (
+//     <div
+//       style={{
+//         width: '180px', // ⬅️ Smaller width
+//         backgroundColor: '#fff',
+//         borderRadius: '10px',
+//         padding: '12px',
+//         boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+//         fontFamily: 'system-ui, sans-serif',
+//         display: 'flex',
+//         flexDirection: 'column',
+//         gap: '0.5rem',
+//       }}
+//     >
+//       <div
+//         style={{
+//           height: '100px', // ⬅️ Shorter height
+//           borderRadius: '6px',
+//           backgroundColor: product.color || '#f3f4f6',
+//         }}
+//       ></div>
+
+//       <div style={{ textAlign: 'left' }}>
+//         <h3 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '4px' }}>
+//           {product.name}
+//         </h3>
+//         <p style={{ margin: 0, fontSize: '13px', color: '#6b7280' }}>
+//           Size: {product.size}
+//         </p>
+//         <p style={{ margin: '4px 0', fontWeight: 'bold', fontSize: '14px' }}>
+//           ${product.price.toFixed(2)}
+//         </p>
+//       </div>
+
+//       <button
+//         onClick={() => addToCart(product)}
+//         style={{
+//           marginTop: 'auto',
+//           backgroundColor: '#3b82f6',
+//           color: '#fff',
+//           padding: '8px 0',
+//           border: 'none',
+//           borderRadius: '6px',
+//           fontWeight: '600',
+//           cursor: 'pointer',
+//           fontSize: '13px',
+//         }}
+//       >
+//         Add to Cart
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default ProductCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react';
 
 const ProductCard = ({ product, addToCart }) => {
   return (
-    <div style={{ width: '200px', padding: '1rem', border: '1px solid #eee', borderRadius: '10px', textAlign: 'center' }}>
-      <div style={{ backgroundColor: product.color, height: '150px', borderRadius: '5px', marginBottom: '0.5rem' }}></div>
-      <h3>{product.name}</h3>
-      <p style={{ fontWeight: 'bold', color: '#1e3a8a' }}>${product.price}</p>
-      <button onClick={() => addToCart(product)} style={{ marginTop: '0.5rem', backgroundColor: '#3b82f6', color: '#fff', padding: '0.5rem 1rem', border: 'none', borderRadius: '5px' }}>
+    <div
+      style={{
+        width: '100%', // ⬅️ Fill the 1fr column
+        backgroundColor: '#fff',
+        borderRadius: '10px',
+        padding: '16px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+        fontFamily: 'system-ui, sans-serif',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.5rem',
+      }}
+    >
+      <div
+        style={{
+          height: '140px',
+          borderRadius: '6px',
+          backgroundColor: product.color || '#f3f4f6',
+        }}
+      ></div>
+
+      <div style={{ textAlign: 'left' }}>
+        <h3 style={{ fontSize: '15px', fontWeight: 600, marginBottom: '4px' }}>
+          {product.name}
+        </h3>
+        <p style={{ margin: 0, fontSize: '13px', color: '#6b7280' }}>
+          Size: {product.size}
+        </p>
+        <p style={{ margin: '4px 0', fontWeight: 'bold', fontSize: '14px' }}>
+          ${product.price.toFixed(2)}
+        </p>
+      </div>
+
+      <button
+        onClick={() => addToCart(product)}
+        style={{
+          marginTop: 'auto',
+          backgroundColor: '#3b82f6',
+          color: '#fff',
+          padding: '10px 0',
+          border: 'none',
+          borderRadius: '6px',
+          fontWeight: '600',
+          cursor: 'pointer',
+          fontSize: '14px',
+        }}
+      >
         Add to Cart
       </button>
     </div>
@@ -14,4 +127,3 @@ const ProductCard = ({ product, addToCart }) => {
 };
 
 export default ProductCard;
-
