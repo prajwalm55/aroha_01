@@ -292,7 +292,7 @@ const AdminDashboard = () => {
     padding: '10px',
     borderRadius: '4px',
     border: '1px solid #ccc',
-    fontSize: '24px',
+    fontSize: '14px',
   };
 
   return (
@@ -359,7 +359,7 @@ const AdminDashboard = () => {
                   border: 'none',
                   textAlign: 'left',
                   cursor: 'pointer',
-                  fontSize: '24px',
+                  fontSize: '14px',
                   borderRadius: '8px',
                   color: '#374151'
                 }}
@@ -384,7 +384,7 @@ const AdminDashboard = () => {
           { label: 'Total Products 📦', value: totalProducts },
           { label: 'Active Products ✅', value: activeProducts },
           { label: 'Low Stock ⚠️', value: lowStock },
-          { label: 'Total Value 💰', value: `$${totalValue.toFixed(2)}` }
+          { label: 'Total Value 💰', value: `₹${totalValue.toFixed(2)}/-` }
         ].map((stat, idx) => (
           <div key={idx} style={{ backgroundColor: '#fff', padding: '16px', borderRadius: '8px' }}>
             <p style={{ margin: '0 0 8px 0' }}>{stat.label}</p>
@@ -476,7 +476,8 @@ const AdminDashboard = () => {
                     textAlign: 'center',
                     transition: 'background-color 0.2s ease-in-out',
                     cursor: 'pointer',
-                    padding: '14px'
+                    padding: '14px',
+                    backgroundColor: 'transparent'
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.backgroundColor = '#e5e7eb';
@@ -484,10 +485,19 @@ const AdminDashboard = () => {
                   onMouseLeave={(e) => {
                     e.target.style.backgroundColor = 'transparent';
                   }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = 'transparent';
+                  }}
                 >
                   <select
                     value={filters.category}
                     onChange={(e) => handleFilterChange('category', e.target.value)}
+                    onFocus={(e) => {
+                      e.target.parentElement.style.backgroundColor = 'transparent';
+                    }}
+                    onBlur={(e) => {
+                      e.target.parentElement.style.backgroundColor = 'transparent';
+                    }}
                     style={{
                       padding: '4px',
                       fontSize: '16px',
@@ -543,7 +553,8 @@ const AdminDashboard = () => {
                     textAlign: 'center',
                     transition: 'background-color 0.2s ease-in-out',
                     cursor: 'pointer',
-                    padding: '14px'
+                    padding: '14px',
+                    backgroundColor: 'transparent'
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.backgroundColor = '#e5e7eb';
@@ -551,10 +562,19 @@ const AdminDashboard = () => {
                   onMouseLeave={(e) => {
                     e.target.style.backgroundColor = 'transparent';
                   }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = 'transparent';
+                  }}
                 >
                   <select
                     value={filters.size}
                     onChange={(e) => handleFilterChange('size', e.target.value)}
+                    onFocus={(e) => {
+                      e.target.parentElement.style.backgroundColor = 'transparent';
+                    }}
+                    onBlur={(e) => {
+                      e.target.parentElement.style.backgroundColor = 'transparent';
+                    }}
                     style={{
                       padding: '4px',
                       fontSize: '16px',
@@ -577,7 +597,8 @@ const AdminDashboard = () => {
                     textAlign: 'center',
                     transition: 'background-color 0.2s ease-in-out',
                     cursor: 'pointer',
-                    padding: '14px'
+                    padding: '14px',
+                    backgroundColor: 'transparent'
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.backgroundColor = '#e5e7eb';
@@ -585,10 +606,19 @@ const AdminDashboard = () => {
                   onMouseLeave={(e) => {
                     e.target.style.backgroundColor = 'transparent';
                   }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = 'transparent';
+                  }}
                 >
                   <select
                     value={filters.style}
                     onChange={(e) => handleFilterChange('style', e.target.value)}
+                    onFocus={(e) => {
+                      e.target.parentElement.style.backgroundColor = 'transparent';
+                    }}
+                    onBlur={(e) => {
+                      e.target.parentElement.style.backgroundColor = 'transparent';
+                    }}
                     style={{
                       padding: '4px',
                       fontSize: '16px',
@@ -695,7 +725,7 @@ const AdminDashboard = () => {
                         e.target.style.transform = 'scale(1)';
                       }}
                     >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
@@ -714,7 +744,7 @@ const AdminDashboard = () => {
                         e.target.style.transform = 'scale(1)';
                       }}
                     >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6" stroke="#da1b1b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
@@ -724,8 +754,10 @@ const AdminDashboard = () => {
             </tbody>
           </table>
         </div>
-      </div>
+        </div>
+
       {/* Updated Modal with Image Upload */}
+
       {showModal && (
         <div style={{
           position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
@@ -856,9 +888,9 @@ const AdminDashboard = () => {
                 style={{...inputStyle, width: '100%', boxSizing: 'border-box'}}
               >
                 <option value="">Select Category</option>
-                <option value="Shirt">Shirt</option>
-                <option value="Pant">Pant</option>
-                <option value="Accesories">Accesories</option>
+                <option value="Shirts">Shirts</option>
+                <option value="Pants">Pants</option>
+                <option value="Accessories">Accessories</option>
               </select>
               <input 
                 name="price" 
